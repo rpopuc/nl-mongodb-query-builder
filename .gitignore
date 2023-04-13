@@ -1,0 +1,5 @@
+.idea/
+.docker/data
+nome_modules/
+vendor/
+.env

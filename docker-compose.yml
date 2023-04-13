@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  app:
+    image: node
+    volumes:
+      - ./:/var/www/
+    working_dir: /var/www/
+    env_file: .env
+    tty: true
+
+  database:
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: test
+    volumes:
+      - .docker/data/mongo:/data/db
+      - .docker/config/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
