@@ -30,7 +30,7 @@ To configure and run the project:
 3. Fill in the `.env` file with the OpenAI API access key obtained at https://platform.openai.com/account/api-keys.
 
     ```
-    OPENAI_API_KEY=<sua chave>
+    OPENAI_API_KEY=<your key>
     ```
 
 4. Finally, run the docker-compose:
@@ -46,7 +46,7 @@ A MongoDB database will be started with some data already filled in (randomly ge
 To execute a query in natural language, run the following command:
 
 ```
-docker-compose exec app node query.js "<consulta em linguagem natural>"
+docker-compose exec app node query.js "<natural language query>"
 ```
 
 Here are some query examples (they can be done in English or Portuguese, perhaps even in other languages, but I haven't tested...):
@@ -62,7 +62,7 @@ Here are some query examples (they can be done in English or Portuguese, perhaps
 
 ## Customization
 
-It's possible to customize the prompt models for query conversion. The models are in the files templates/chatgpt-prompt.txt and templates/ia-prompt.template. However, changes to these models may affect the application's behavior and cause malfunctions in the data listing generation.
+It's possible to customize the prompt models for query conversion. The models are in the files [templates/ia-prompt.template](templates/ia-prompt.template) and [templates/user-prompt.template](templates/user-prompt.template). However, changes to these models may affect the application's behavior and cause malfunctions in the data listing generation.
 
 ## Disclaimer
 
@@ -73,3 +73,7 @@ This project is a Proof of Concept of the use of the OpenAI API for generating q
 - OpenAI API: https://platform.openai.com/account/api-keys
 - MongoDB documentation: https://www.mongodb.com/docs/
 - MongoDB image documentation on DockerHub: https://hub.docker.com/_/mongo/
+
+## Trivia
+
+This documentation was also created with AI assistance 🤖 😉.
