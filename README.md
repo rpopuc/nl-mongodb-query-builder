@@ -66,6 +66,14 @@ Here are some query examples (they can be done in English or Portuguese, perhaps
 - Which war games are the most played?
 ```
 
+## Function calls
+
+It is also possible to utilize the OpenAI API's function calls feature for your queries. Execute the following command:
+
+```
+docker-compose exec app node query-by-function-call.js "<natural language query>"
+```
+
 ## Customization
 
 It's possible to customize the prompt models for query conversion. The models are in the files [templates/ia-prompt.template](templates/ia-prompt.template) and [templates/user-prompt.template](templates/user-prompt.template). However, changes to these models may affect the application's behavior and cause malfunctions in the data listing generation.
