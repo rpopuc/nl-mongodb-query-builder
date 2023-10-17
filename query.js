@@ -6,6 +6,7 @@ const option = process.argv[3] ?? undefined;
 
 if (option !== '--cached') {
     QueryBuilder.handle(question).then(response => {
+        console.log('Response', response)
         DatabaseQuery.handle(response)
     })
 } else {

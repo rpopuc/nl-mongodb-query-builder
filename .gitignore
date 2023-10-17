@@ -1,5 +1,5 @@
 .idea/
 .docker/data
-nome_modules/
+node_modules/
 vendor/
 .env
