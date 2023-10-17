@@ -33,10 +33,16 @@ To configure and run the project:
     OPENAI_API_KEY=<your key>
     ```
 
-4. Finally, run the docker-compose:
+4. Run the docker-compose to up all containers:
 
     ```
     docker-compose up -d
+    ```
+
+5. And, finally, install node dependencies:
+
+    ```
+    docker-compose exec app npm install
     ```
 
 A MongoDB database will be started with some data already filled in (randomly generated with the ChatGPT). The data is located in `.docker/config/mongo/mongo-init.js`. This data is loaded only on the first execution of MongoDB. To change the data to any other set, please consult the [MongoDB documentation](https://www.mongodb.com/docs/) and the MongoDB image documentation on [DockerHub](https://hub.docker.com/_/mongo).
