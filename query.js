@@ -6,8 +6,7 @@ const option = process.argv[3] ?? undefined;
 
 if (option !== '--cached') {
     QueryBuilder.handle(question).then(response => {
-        console.log('Response', response)
-        DatabaseQuery.handle(response)
+        DatabaseQuery.handle(JSON.parse(response))
     })
 } else {
     const fs = require('fs');
